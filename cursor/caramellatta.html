@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title data-tr="Sütlü Filtre Kahve" data-en="Filter Coffee with Milk">Sütlü Filtre Kahve</title>
+   <link rel="icon" href="belediyelogo.png" type="image/png">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* HERO SECTION */
+.hero-section {
+  background-color: #00381f;
+  color: white;
+  padding: 60px 20px;
+  position: relative;
+  overflow: visible;
+}
+
+.hero-section h1 {
+  font-size: 2rem;
+}
+
+.coffee-image {
+  width: 300px;
+  height: 300px;
+  background-color: #00381f(255,255,255,0.15);
+  border-radius: 50%;
+  position: absolute;
+  right: 5%;
+  bottom: -100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.coffee-image img {
+  max-width: 70%;
+  height: auto;
+}
+
+/* Küçük ekranlarda sadece boyutu küçült */
+@media (max-width: 768px) {
+  .coffee-image {
+    width: 180px;
+    height: 180px;
+    bottom: -60px;  /* biraz yukarı alabilirsin */
+    right: 5%;
+  }
+}
+
+
+/* RECOMMENDATIONS */
+.recommendations img {
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  width: 120px;
+  height: 120px;
+}
+
+/* Küçük ekranlar */
+@media (max-width: 576px) {
+  .recommendations img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* Orta ekranlar */
+@media (min-width: 577px) and (max-width: 992px) {
+  .recommendations img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* Büyük ekranlar */
+@media (min-width: 993px) {
+  .recommendations img {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+/* ÜRÜN AÇIKLAMA */
+.product-description {
+  font-size: 0.9rem;
+  color: white;
+  font-weight: normal;
+  line-height: 1.4;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+</style>
+</head>
+<body>
+<br><br><br><br>
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container">
+        <div class="row d-flex align-items-center">
+            <div class="col-md-7 mb-4 mb-md-0">
+                <p class="mb-1">
+                    <a href="index.html" class="text-white text-decoration-none" data-tr="İçecekler" data-en="Beverages">İçecekler</a> > 
+                    <a href="sogukkahve.html" class="text-white text-decoration-none" data-tr="Soğuk Kahveler" data-en="Iced Coffees">Soğuk Kahveler</a> > 
+                    <strong data-tr="Caramel Latte" data-en="Caramel Latte">Caramel Latte</strong>
+                </p>
+                <br>
+                <h1 class="fw-bold" data-tr="Caramel Latte" data-en="Caramel Latte">Caramel Latte</h1>
+                <p data-tr="Süt, kahve ve karamelin tatlı rüyası... Zengin espresso ve buharda ısıtılmış sütün pürüzsüz karışımına, karşı konulmaz karamel sosu eklenir. İçeceğin üzerine gezdirilen karamel sosu ile hem görsel bir şölen sunar hem de her yudumda tatlı ve ipeksi bir lezzet bırakır. Kahve deneyimini tatlı bir dokunuşla zenginleştirmek isteyenler için mükemmel bir seçimdir." data-en="The sweet dream of milk, coffee, and caramel... An irresistible caramel sauce is added to a smooth blend of rich espresso and steamed milk. The caramel sauce drizzled on top not only offers a visual feast but also leaves a sweet and silky flavor with every sip. It's the perfect choice for those who want to enrich their coffee experience with a sweet touch.">
+                    Süt, kahve ve karamelin tatlı rüyası... Zengin espresso ve buharda ısıtılmış sütün pürüzsüz karışımına, karşı konulmaz karamel sosu eklenir. İçeceğin üzerine gezdirilen karamel sosu ile hem görsel bir şölen sunar hem de her yudumda tatlı ve ipeksi bir lezzet bırakır. Kahve deneyimini tatlı bir dokunuşla zenginleştirmek isteyenler için mükemmel bir seçimdir.
+                </p>
+            </div>
+        </div>
+
+  <!-- ✅ Kahve görselini taşıyan özel yapı -->
+  <div class="coffee-image">
+    <img src="icelatte.png" alt="Single Espresso Kahve">
+  </div>
+</section>
+
+
+
+<!-- Recommendations -->
+<section class="recommendations py-5">
+  <div class="container">
+    <h4 class="mb-4" data-tr="Bu ürünle birlikte önerilenler" data-en="Recommended with this product">Bu ürünle birlikte önerilenler</h4>
+    <div class="row text-center">
+      <div class="col-6 col-md-2">
+  <a href="sufle.html" style="text-decoration: none; color: inherit;">
+    <img src="sufle.png" alt="">
+    <p data-tr="Sufle" data-en="Soufflé">Sufle</p>
+  </a>
+</div>
+<div class="col-6 col-md-2">
+  <a href="cikmono.html" style="text-decoration: none; color: inherit;">
+    <img src="cikolata.png" alt="">
+    <p data-tr="Çikolatalı Mono" data-en="Chocolate Mono">Çikolatalı Mono</p>
+  </a>
+</div>
+  </div>
+</section>
+
+<div id="navbar-placeholder"></div>
+<div id="footer-placeholder"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // Navbar'ı yükle
+        fetch('navbar.html')
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+                // Navbar yüklendikten sonra dil butonunu çalıştır
+                const initialLang = localStorage.getItem("selectedLang") || document.documentElement.lang || 'tr';
+                document.documentElement.lang = initialLang;
+                updateLanguageTexts(initialLang);
+                
+                const langSwitch = document.getElementById('langSwitch');
+                if (langSwitch) {
+                    langSwitch.textContent = initialLang.toUpperCase();
+                    langSwitch.addEventListener('click', toggleLanguage);
+                }
+            })
+            .catch(error => console.error("Navbar yüklenemedi:", error));
+
+        // Footer'ı yükle
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer-placeholder").innerHTML = data;
+            })
+            .catch(error => console.error("Footer yüklenemedi:", error));
+    });
+
+    // Dil değiştirme fonksiyonu
+    function toggleLanguage() {
+        const currentLang = document.documentElement.lang;
+        const newLang = currentLang === "tr" ? "en" : "tr";
+        
+        document.documentElement.lang = newLang;
+        localStorage.setItem("selectedLang", newLang);
+        
+        const langSwitch = document.getElementById("langSwitch");
+        if (langSwitch) {
+            langSwitch.textContent = newLang.toUpperCase();
+        }
+        
+        updateLanguageTexts(newLang);
+    }
+
+    // Tüm dil verilerini güncelleyen fonksiyon
+    function updateLanguageTexts(lang) {
+        document.querySelectorAll('[data-tr], [data-en]').forEach(el => {
+            const text = el.getAttribute(`data-${lang}`);
+            if (text) {
+                el.textContent = text;
+            }
+        });
+    }
+</script>
+
+</body>
+</html>
+

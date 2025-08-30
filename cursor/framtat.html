@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-tr="Cafe Menüsü" data-en="Cafe Menu">Cafe Menüsü</title>
+
+  <link rel="icon" href="belediyelogo.png" type="image/png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background-color: #fafafa;
+    }
+    /* NAVBAR */
+    .navbar-custom {
+      background-color: #00381f !important;
+    }
+    .navbar-custom .navbar-brand,
+    .navbar-custom .nav-link,
+    .navbar-custom .btn {
+      color: #fff !important;
+    }
+    /* Linkler */
+.sidebar-link {
+  font-size: 0.95rem;
+  color: #444;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-link:hover {
+  background-color: #f7f7f7;
+  color: #002d26;
+  transform: translateX(3px);
+}
+
+    /* FOOTER */
+    footer {
+      background-color: #00381f !important;
+    }
+    footer a {
+      text-decoration: none;
+    }
+    .circular-image-container {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            border-radius: 50%;
+            overflow: hidden;
+            max-width: 200px;
+            margin: 0 auto;
+        }
+        .circular-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        #langBtn {
+            min-width: 50px;
+        }
+        p {
+            font-weight: 600;
+        }
+  </style>
+</head>
+<body>
+<br><br><br><br>
+<div class="container-fluid">
+  <div class="row">
+    <!-- Sidebar -->
+    <aside class="col-md-3 col-lg-2 sidebar d-none d-md-block">
+      <div class="sidebar-wrapper p-3">
+        <!-- Arama -->
+        <div class="search-box mb-4">
+          <input type="text" id="searchInput" class="form-control" placeholder="Ara / Search">
+        </div>
+
+        <!-- Başlık -->
+        <h5 class="sidebar-title mb-3" data-tr="İçecekler" data-en="Drinks">İçecekler</h5>
+        <!-- Menü -->
+        <div class="list-group list-group-flush">
+          <a href="drip.html" class="list-group-item sidebar-link" data-tr="Drip Coffe" data-en="Drip Coffee">
+            <i class="bi bi-star-fill me-2"></i>Drip Coffee
+          </a>
+          <a href="espresso.html" class="list-group-item sidebar-link" data-tr="Espresso Bazlı İçecekler" data-en="Espresso Beverages">
+            <i class="bi bi-cup-hot me-2"></i>Espresso Bazlı İçecekler
+          </a>
+          <a href="sıcak.html" class="list-group-item sidebar-link" data-tr="Sıcak İçecekler" data-en="Hot Drinks">
+            <i class="bi bi-droplet me-2"></i>Sıcak İçecekler
+          </a>
+          <a href="frappe.html" class="list-group-item sidebar-link" data-tr="Frappe" data-en="Frappe">
+            <i class="bi bi-cup-straw me-2"></i>Frappe
+          </a>
+          <a href="mılkshake.html" class="list-group-item sidebar-link" data-tr="Milkshake" data-en="Milkshake">
+            <i class="bi bi-ice-cream me-2"></i>Milkshake
+          </a>
+          <a href="frozen.html" class="list-group-item sidebar-link" data-tr="Frozen" data-en="Frozen">
+            <i class="bi bi-cup me-2"></i>Frozen
+          </a>
+          <a href="soguk.html" class="list-group-item sidebar-link" data-tr="Soğuk İçecekler" data-en="Cold Drinks">
+            <i class="bi bi-cup-tea me-2"></i>Soğuk İçecekler
+          </a>
+          <a href="sogukkahve.html" class="list-group-item sidebar-link" data-tr="Soğuk Kahveler" data-en="Iced Coffees">
+            <i class="bi bi-emoji-smile me-2"></i>Soğuk Kahveler
+          </a>
+          <a href="sise.html" class="list-group-item sidebar-link" data-tr="Şişede İçecekler" data-en="Drinks in Bottles">
+            <i class="bi bi-emoji-smile me-2"></i>Şişede İçecekler
+          </a>
+        </div>
+
+        <br>
+        <h5 class="sidebar-title mb-3" data-tr="Tatlılar" data-en="Desserts">Tatlılar</h5>
+        <div class="list-group list-group-flush">
+          <a href="ciktat.html" class="list-group-item sidebar-link" data-tr="Çikolatalı Tatlılar" data-en="Chocolate Desserts">
+            <i class="bi bi-star-fill me-2"></i>Çikolatalı Tatlılar
+          </a>
+          <a href="framtat.html" class="list-group-item sidebar-link" data-tr="Frambuazlı Tatlılar" data-en="Raspberry Desserts">
+            <i class="bi bi-cup-hot me-2"></i>Frambuazlı Tatlılar
+          </a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ✅ İÇERİK -->
+    <main class="col-md-9 col-lg-10 p-4">
+      <h3 class="mb-4" data-tr="MEYVELİ TATLILAR" data-en="FRUIT DESSERTS">MEYVELİ TATLILAR</h3>
+      <div class="row g-4">
+        <div class="col-6 col-md-3 text-center">
+                        <a href="red.html" style="text-decoration: none; color: inherit;">
+                            <div class="circular-image-container">
+                                <img src="redvelvet.png" alt="Red Velvet" class="circular-image">
+                            </div>
+                            <p class="mt-3 fw-semibold" data-tr="Red Velvet" data-en="Red Velvet">Red Velvet</p>
+                            <p class="mt-3 fw-semibold" data-tr="120₺" data-en="120₺">120₺</p>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-3 text-center">
+                        <a href="framono.html" style="text-decoration: none; color: inherit;">
+                            <div class="circular-image-container">
+                                <img src="mouse.png" alt="Frambuazlı Mono" class="circular-image">
+                            </div>
+                            <p class="mt-3 fw-semibold" data-tr="Frambuazlı Mono" data-en="Raspberry Mono">Frambuazlı Mono</p>
+                            <p class="mt-3 fw-semibold" data-tr="120₺" data-en="120₺">120₺</p>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-3 text-center">
+                        <a href="chees.html" style="text-decoration: none; color: inherit;">
+                            <div class="circular-image-container">
+                                <img src="cheescake.png" alt="Frambuazlı Cheesecake" class="circular-image">
+                            </div>
+                            <p class="mt-3 fw-semibold" data-tr="Frambuazlı Cheesecake" data-en="Raspberry Cheesecake">Frambuazlı Cheesecake</p>
+                            <p class="mt-3 fw-semibold" data-tr="120₺" data-en="120₺">120₺</p>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-3 text-center">
+                        <a href="bella.html" style="text-decoration: none; color: inherit;">
+                            <div class="circular-image-container">
+                                <img src="frambuaz.png" alt="Frambuazlı Mono" class="circular-image">
+                            </div>
+                            <p class="mt-3 fw-semibold" data-tr="Frambuazlı Mono" data-en="Raspberry Mono">Frambuazlı Mono</p>
+                            <p class="mt-3 fw-semibold" data-tr="120₺" data-en="120₺">120₺</p>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-3 text-center">
+                        <a href="orman.html" style="text-decoration: none; color: inherit;">
+                            <div class="circular-image-container">
+                                <img src="ibiza.png" alt="Orman Meyveli Rulo" class="circular-image">
+                            </div>
+                            <p class="mt-3 fw-semibold" data-tr="Orman Meyveli Rulo" data-en="Forest Fruit Roll">Orman Meyveli Rulo</p>
+                            <p class="mt-3 fw-semibold" data-tr="120₺" data-en="120₺">120₺</p>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-3 text-center">
+                        <a href="dondurma.html" style="text-decoration: none; color: inherit;">
+                            <div class="circular-image-container">
+                                <img src="dondurma.png" alt="Dondurma" class="circular-image">
+                            </div>
+                            <p class="mt-3 fw-semibold" data-tr="Dondurma" data-en="Ice-cream">Dondurma</p>
+                            <p class="mt-3 fw-semibold" data-tr="120₺" data-en="120₺">120₺</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+  </div>
+</div>
+
+<div id="navbar-placeholder"></div>
+<div id="footer-placeholder"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // Navbar'ı yükle
+        fetch('navbar.html')
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+                // Navbar yüklendikten sonra dil butonunu çalıştır
+                const initialLang = localStorage.getItem("selectedLang") || document.documentElement.lang || 'tr';
+                document.documentElement.lang = initialLang;
+                updateLanguageTexts(initialLang);
+                
+                const langSwitch = document.getElementById('langSwitch');
+                if (langSwitch) {
+                    langSwitch.textContent = initialLang.toUpperCase();
+                    langSwitch.addEventListener('click', toggleLanguage);
+                }
+            })
+            .catch(error => console.error("Navbar yüklenemedi:", error));
+
+        // Footer'ı yükle
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer-placeholder").innerHTML = data;
+            })
+            .catch(error => console.error("Footer yüklenemedi:", error));
+    });
+
+    // Dil değiştirme fonksiyonu
+    function toggleLanguage() {
+        const currentLang = document.documentElement.lang;
+        const newLang = currentLang === "tr" ? "en" : "tr";
+        
+        document.documentElement.lang = newLang;
+        localStorage.setItem("selectedLang", newLang);
+        
+        const langSwitch = document.getElementById("langSwitch");
+        if (langSwitch) {
+            langSwitch.textContent = newLang.toUpperCase();
+        }
+        
+        updateLanguageTexts(newLang);
+    }
+
+    // Tüm dil verilerini güncelleyen fonksiyon
+    function updateLanguageTexts(lang) {
+        document.querySelectorAll('[data-tr], [data-en]').forEach(el => {
+            const text = el.getAttribute(`data-${lang}`);
+            if (text) {
+                el.textContent = text;
+            }
+        });
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-tr="Kahve Otağı Menüsü" data-en="Kahve Otağı Menu">Kahve Otağı Menüsü</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="icon" href="belediyelogo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #fff;
+      font-family: 'Montserrat', sans-serif;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+    
+    .menu-header {
+      background-color: #006241;
+      color: white;
+      padding: 10px 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+    .menu-header .logo {
+        height: 35px;
+    }
+    .menu-header .hamburger {
+        font-size: 22px;
+    }
+
+    /* Bilgi ve Filtre Barları */
+    .info-bar, .favorites-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #e0f2e0;
+      border: 1px solid #c8e6c8;
+      border-radius: 8px;
+      padding: 12px;
+      margin-bottom: 8px;
+      text-decoration: none;
+      color: #006241;
+      font-weight: 600;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      transition: background-color 0.2s;
+      font-size: 1rem;
+    }
+    
+    /* Başlıklar */
+    .menu-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #782913;
+      margin-top: 1.5rem;
+      margin-bottom: 0.8rem;
+    }
+    
+    /* Menü Öğeleri */
+    .menu-item-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 0;
+      border-bottom: 1px solid #ccc;
+      text-decoration: none;
+      color: #333;
+      transition: background-color 0.2s;
+    }
+    .menu-item-container:hover {
+      background-color: #f9f9f9;
+    }
+    .menu-item-left {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .menu-item-image {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid white;
+    }
+    .menu-item-text {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 0;
+    }
+    .menu-price {
+      font-weight: 600;
+      color: #333;
+    }
+    .menu-arrow {
+      font-size: 1.3rem;
+      color: #666;
+    }
+    .price-and-arrow {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    /* Mobil için ek responsive düzenlemeler */
+    @media (max-width: 576px) {
+      .menu-item-image {
+          width: 60px;
+          height: 60px;
+      }
+      .menu-item-text {
+          font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<br><br><br><br>
+
+<div class="container">
+  
+
+  <a href="#" class="">
+    <div class="d-flex align-items-center">
+      
+    </div>
+    
+  </a>
+
+  <div class="">
+    <div class="">
+      <i class=""></i>
+
+    </div>
+    <div class="">
+      <i class=""></i>
+      <span data-tr="" data-en=""></span>
+    </div>
+  </div>
+
+  <div class="col-12">
+    <h3 class="menu-title" data-tr="DRIP COFFEE" data-en="DRIP COFFEE">DRIP COFFEE</h3>
+    <a href="filtre.html" class="menu-item-container">
+      <div class="menu-item-left">
+        <img src="americano.png" alt="Filtre Kahve" class="menu-item-image">
+        <span class="menu-item-text" data-tr="FİLTRE KAHVE" data-en="FILTER COFFEE">FİLTRE KAHVE</span>
+      </div>
+      <div class="price-and-arrow">
+        <span class="menu-price">90₺</span>
+        <span class="menu-arrow">→</span>
+      </div>
+    </a>
+    <a href="sutfiltre.html" class="menu-item-container">
+      <div class="menu-item-left">
+        <img src="icelatte.png" alt="Sütlü Filtre Kahve" class="menu-item-image">
+        <span class="menu-item-text" data-tr="SÜTLÜ FİLTRE KAHVE" data-en="MILKY FILTER COFFEE">SÜTLÜ FİLTRE KAHVE</span>
+      </div>
+      <div class="price-and-arrow">
+        <span class="menu-price">100₺</span>
+        <span class="menu-arrow">→</span>
+      </div>
+    </a>
+    <h3 class="menu-title" data-tr="ESPRESSO BAZLI KAHVELER" data-en="ESPRESSO-BASED COFFEES">ESPRESSO BAZLI KAHVELER</h3>
+    <a href="sıngle.html" class="menu-item-container">
+      <div class="menu-item-left">
+        <img src="sıcak.png" alt="Single Espresso" class="menu-item-image">
+        <span class="menu-item-text" data-tr="SINGLE ESPRESSO" data-en="SINGLE ESPRESSO">SINGLE ESPRESSO</span>
+      </div>
+      <div class="price-and-arrow">
+        <span class="menu-price">70₺</span>
+        <span class="menu-arrow">→</span>
+      </div>
+    </a>
+    <a href="double.html" class="menu-item-container">
+      <div class="menu-item-left">
+        <img src="sıcak.png" alt="Double Espresso" class="menu-item-image">
+        <span class="menu-item-text" data-tr="DOUBLE ESPRESSO" data-en="DOUBLE ESPRESSO">DOUBLE ESPRESSO</span>
+      </div>
+      <div class="price-and-arrow">
+        <span class="menu-price">80₺</span>
+        <span class="menu-arrow">→</span>
+      </div>
+    </a>
+    <a href="americano.html" class="menu-item-container">
+      <div class="menu-item-left">
+        <img src="americano.png" alt="Americano" class="menu-item-image">
+        <span class="menu-item-text" data-tr="AMERICANO" data-en="AMERICANO">AMERICANO</span>
+      </div>
+      <div class="price-and-arrow">
+        <span class="menu-price">90₺</span>
+        <span class="menu-arrow">→</span>
+      </div>
+    </a>
+    <a href="cafelatte.html" class="menu-item-container">
+      <div class="menu-item-left">
+        <img src="icelatte.png" alt="Cafe Latte" class="menu-item-image">
+        <span class="menu-item-text" data-tr="CAFE LATTE" data-en="CAFE LATTE">CAFE LATTE</span>
+      </div>
+      <div class="price-and-arrow">
+        <span class="menu-price">90₺</span>
+        <span class="menu-arrow">→</span>
+      </div>
+    </a>
+    <a href="flatwhite.html" class="menu-item-container">
+      <div class="menu-item-left">
+        <img src="icelatte.png" alt="Flat White" class="menu-item-image">
+        <span class="menu-item-text" data-tr="FLAT WHITE" data-en="FLAT WHITE">FLAT WHITE</span>
+      </div>
+      <div class="price-and-arrow">
+        <span class="menu-price">100₺</span>
+        <span class="menu-arrow">→</span>
+      </div>
+    </a>
+    <a href="cappucino.html" class="menu-item-container">
+      <div class="menu-item-left">
+        <img src="sıcak.png" alt="Cappuccino" class="menu-item-image">
+        <span class="menu-item-text" data-tr="CAPPUCCINO" data-en="CAPPUCCINO">CAPPUCCINO</span>
+      </div>
+      <div class="price-and-arrow">
+        <span class="menu-price">90₺</span>
+        <span class="menu-arrow">→</span>
+      </div>
+    </a>
+    <a href="mocha.html" class="menu-item-container">
+      <div class="menu-item-left">
+        <img src="mochasıcak.png" alt="Cafe Mocha" class="menu-item-image">
+        <span class="menu-item-text" data-tr="CAFE MOCHA" data-en="CAFE MOCHA">CAFE MOCHA</span>
+      </div>
+      <div class="price-and-arrow">
+        <span class="menu-price">100₺</span>
+        <span class="menu-arrow">→</span>
+      </div>
+    </a>
+    <a href="whitemocha.html" class="menu-item-container">
+      <div class="menu-item-left">
+        <img src="aromalilatte.png" alt="White Chocolate Mocha" class="menu-item-image">
+        <span class="menu-item-text" data-tr="WHITE CHOCOLATE MOCHA" data-en="WHITE CHOCOLATE MOCHA">WHITE CHOCOLATE MOCHA</span>
+      </div>
+      <div class="price-and-arrow">
+        <span class="menu-price">100₺</span>
+        <span class="menu-arrow">→</span>
+      </div>
+    </a>
+    <a href="darkmocha.html" class="menu-item-container">
+      <div class="menu-item-left">
+        <img src="mochasıcak.png" alt="Dark Mocha" class="menu-item-image">
+        <span class="menu-item-text" data-tr="DARK MOCHA" data-en="DARK MOCHA">DARK MOCHA</span>
+      </div>
+      <div class="price-and-arrow">
+        <span class="menu-price">100₺</span>
+        <span class="menu-arrow">→</span>
+      </div>
+    </a>
+    <a href="caramellatta.html" class="menu-item-container">
+      <div class="menu-item-left">
+        <img src="icelatte.png" alt="Caramel Latte" class="menu-item-image">
+        <span class="menu-item-text" data-tr="CARAMEL LATTE" data-en="CARAMEL LATTE">CARAMEL LATTE</span>
+      </div>
+      <div class="price-and-arrow">
+        <span class="menu-price">100₺</span>
+        <span class="menu-arrow">→</span>
+      </div>
+    </a>
+    <a href="caramelmacchiato.html" class="menu-item-container">
+      <div class="menu-item-left">
+        <img src="aromalilatte.png" alt="Caramel Macchiato" class="menu-item-image">
+        <span class="menu-item-text" data-tr="CARAMEL MACCHIATO" data-en="CARAMEL MACCHIATO">CARAMEL MACCHIATO</span>
+      </div>
+      <div class="price-and-arrow">
+        <span class="menu-price">100₺</span>
+        <span class="menu-arrow">→</span>
+      </div>
+    </a>
+
+    <h3 class="menu-title" data-tr="SICAK İÇECEKLER" data-en="HOT DRINKS">SICAK İÇECEKLER</h3>
+    <a href="sıcakcikolata.html" class="menu-item-container">
+      <div class="menu-item-left">
+        <img src="sıcak.png" alt="Sıcak Çikolata" class="menu-item-image">
+        <span class="menu-item-text" data-tr="SICAK ÇİKOLATA" data-en="HOT CHOCOLATE">SICAK ÇİKOLATA</span>
+      </div>
+      <div class="price-and-arrow">
+        <span class="menu-price">90₺</span>
+        <span class="menu-arrow">→</span>
+      </div>
+    </a>
+    <a href="sıcakcikolata.html" class="menu-item-container">
+      <div class="menu-item-left">
+        <img src="sıcak.png" alt="Sıcak Beyaz Çikolata" class="menu-item-image">
+        <span class="menu-item-text" data-tr="SICAK BEYAZ ÇİKOLATA" data-en="HOT WHITE CHOCOLATE">SICAK BEYAZ ÇİKOLATA</span>
+      </div>
+      <div class="price-and-arrow">
+        <span class="menu-price">90₺</span>
+        <span class="menu-arrow">→</span>
+      </div>
+    </a>
+    <a href="chai.html" class="menu-item-container">
+      <div class="menu-item-left">
+        <img src="sıcak.png" alt="Chai Tea Latte" class="menu-item-image">
+        <span class="menu-item-text" data-tr="CHAI TEA LATTE" data-en="CHAI TEA LATTE">CHAI TEA LATTE</span>
+      </div>
+      <div class="price-and-arrow">
+        <span class="menu-price">80₺</span>
+        <span class="menu-arrow">→</span>
+      </div>
+    </a>
+    <a href="cay.html" class="menu-item-container">
+      <div class="menu-item-left">
+        <img src="çay.png" alt="Çay" class="menu-item-image">
+        <span class="menu-item-text" data-tr="ÇAY" data-en="TEA">ÇAY</span>
+      </div>
+      <div class="price-and-arrow">
+        <span class="menu-price">20₺</span>
+        <span class="menu-arrow">→</span>
+      </div>
+    </a>
+    <a href="turk.html" class="menu-item-container">
+      <div class="menu-item-left">
+        <img src="turk.png" alt="Türk Kahvesi ve Çeşitleri" class="menu-item-image">
+        <span class="menu-item-text" data-tr="TÜRK KAHVESİ ve ÇEŞİTLERİ" data-en="TURKISH COFFEE and VARIETIES">TÜRK KAHVESİ ve ÇEŞİTLERİ</span>
+      </div>
+      <div class="price-and-arrow">
+        <span class="menu-price">50₺</span>
+        <span class="menu-arrow">→</span>
+      </div>
+    </a>
+    <a href="salep.html" class="menu-item-container">
+      <div class="menu-item-left">
+        <img src="sıcak.png" alt="Salep" class="menu-item-image">
+        <span class="menu-item-text" data-tr="SALEP" data-en="SALEP">SALEP</span>
+      </div>
+      <div class="price-and-arrow">
+        <span class="menu-price">50₺</span>
+        <span class="menu-arrow">→</span>
+      </div>
+    </a>
+    
+    <h3 class="menu-title" data-tr="FRAPPE" data-en="FRAPPE">FRAPPE</h3>
+    <a href="coffefrappe.html" class="menu-item-container">
+      <div class="menu-item-left">
+        <img src="frappe.png" alt="Coffee Frappe" class="menu-item-image">
+        <span class="menu-item-text" data-tr="COFFEE FRAPPE" data-en="COFFEE FRAPPE">COFFEE FRAPPE</span>
+      </div>
+      <div class="price-and-arrow">
+        <span class="menu-price">100₺</span>
+        <span class="menu-arrow">→</span>
+      </div>
+    </a>
+    <a href="mochafrappe.html" class="menu-item-container">
+      <div class="menu-item-left">
+        <img src="frappe.png" alt="Mocha Frappe" class="menu-item-image">
+        <span class="menu-item-text" data-tr="MOCHA FRAPPE" data-en="MOCHA FRAPPE">MOCHA FRAPPE</span>
+      </div>
+      <div class="price-and-arrow">
+        <span class="menu-price">100₺</span>
+        <span class="menu-arrow">→</span>
+      </div>
+    </a>
+    <a href="whitefrappe.html" class="menu-item-container">
+      <div class="menu-item-left">
+        <img src="frappe.png" alt="White Chocolate Mocha Frappe" class="menu-item-image">
+        <span class="menu-item-text" data-tr="WHITE CHOCOLATE MOCHA FRAPPE" data-en="WHITE CHOCOLATE MOCHA FRAPPE">WHITE CHOCOLATE MOCHA FRAPPE</span>
+      </div>
+      <div class="price-and-arrow">
+        <span class="menu-price">100₺</span>
+        <span class="menu-arrow">→</span>
+      </div>
+    </a>
+    <a href="caramelfrappe.html" class="menu-item-container">
+      <div class="menu-item-left">
+        <img src="frappe.png" alt="Caramel Frappe" class="menu-item-image">
+        <span class="menu-item-text" data-tr="CARAMEL FRAPPE" data-en="CARAMEL FRAPPE">CARAMEL FRAPPE</span>
+      </div>
+      <div class="price-and-arrow">
+        <span class="menu-price">100₺</span>
+        <span class="menu-arrow">→</span>
+      </div>
+    </a>
+    
+    <h3 class="menu-title" data-tr="MILKSHAKE" data-en="MILKSHAKE">MILKSHAKE</h3>
+    <a href="cikolatamilk.html" class="menu-item-container">
+      <div class="menu-item-left">
+        <img src="cikolatamilk.png" alt="Çikolatalı Milkshake" class="menu-item-image">
+        <span class="menu-item-text" data-tr="ÇİKOLATALI MILKSHAKE" data-en="CHOCOLATE MILKSHAKE">ÇİKOLATALI MILKSHAKE</span>
+      </div>
+      <div class="price-and-arrow">
+        <span class="menu-price">95₺</span>
+        <span class="menu-arrow">→</span>
+      </div>
+    </a>
+    <a href="caramelmilk.html" class="menu-item-container">
+      <div class="menu-item-left">
+        <img src="karamelfrozen.png" alt="Karamelli Milkshake" class="menu-item-image">
+        <span class="menu-item-text" data-tr="KARAMELLİ MILKSHAKE" data-en="CARAMEL MILKSHAKE">KARAMELLİ MILKSHAKE</span>
+      </div>
+      <div class="price-and-arrow">
+        <span class="menu-price">95₺</span>
+        <span class="menu-arrow">→</span>
+      </div>
+    </a>
+    <a href="cileklimilk.html" class="menu-item-container">
+      <div class="menu-item-left">
+        <img src="cilekmilk.png" alt="Çilekli Milkshake" class="menu-item-image">
+        <span class="menu-item-text" data-tr="ÇİLEKLİ MILKSHAKE" data-en="STRAWBERRY MILKSHAKE">ÇİLEKLİ MILKSHAKE</span>
+      </div>
+      <div class="price-and-arrow">
+        <span class="menu-price">95₺</span>
+        <span class="menu-arrow">→</span>
+      </div>
+    </a>
+    <a href="vanilya.html" class="menu-item-container">
+      <div class="menu-item-left">
+        <img src="vanilya.png" alt="Vanilyalı Milkshake" class="menu-item-image">
+        <span class="menu-item-text" data-tr="VANİLYALI MILKSHAKE" data-en="VANILLA MILKSHAKE">VANİLYALI MILKSHAKE</span>
+      </div>
+      <div class="price-and-arrow">
+        <span class="menu-price">95₺</span>
+        <span class="menu-arrow">→</span>
+      </div>
+    </a>
+    <a href="muzlumilk.html" class="menu-item-container">
+      <div class="menu-item-left">
+        <img src="muzmilk.png" alt="Muzlu Milkshake" class="menu-item-image">
+        <span class="menu-item-text" data-tr="MUZLU MILKSHAKE" data-en="BANANA MILKSHAKE">MUZLU MILKSHAKE</span>
+      </div>
+      <div class="price-and-arrow">
+        <span class="menu-price">95₺</span>
+        <span class="menu-arrow">→</span>
+      </div>
+    </a>
+    
+    <h3 class="menu-title" data-tr="FROZEN" data-en="FROZEN">FROZEN</h3>
+    <a href="cilekfrozen.html" class="menu-item-container">
+      <div class="menu-item-left">
+        <img src="cilekfrozen.png" alt="Çilekli Frozen" class="menu-item-image">
+        <span class="menu-item-text" data-tr="ÇİLEKLİ FROZEN" data-en="STRAWBERRY FROZEN">ÇİLEKLİ FROZEN</span>
+      </div>
+      <div class="price-and-arrow">
+        <span class="menu-price">90₺</span>
+        <span class="menu-arrow">→</span>
+      </div>
+    </a>
+    <a href="mangolufrozen.html" class="menu-item-container">
+      <div class="menu-item-left">
+        <img src="mangofrozen.png" alt="Mangolu Frozen" class="menu-item-image">
+        <span class="menu-item-text" data-tr="MANGOLU FROZEN" data-en="MANGO FROZEN">MANGOLU FROZEN</span>
+      </div>
+      <div class="price-and-arrow">
+        <span class="menu-price">90₺</span>
+        <span class="menu-arrow">→</span>
+      </div>
+    </a>
+    
+    <h3 class="menu-title" data-tr="SOĞUK İÇECEKLER" data-en="COLD DRINKS">SOĞUK İÇECEKLER</h3>
+    <a href="limonata.html" class="menu-item-container">
+      <div class="menu-item-left">
+        <img src="limonata.png" alt="Limonata" class="menu-item-image">
+        <span class="menu-item-text" data-tr="LİMONATA" data-en="LEMONADE">LİMONATA</span>
+      </div>
+      <div class="price-and-arrow">
+        <span class="menu-price">60₺</span>
+        <span class="menu-arrow">→</span>
+      </div>
+    </a>
+    <a href="cileklimonata.html" class="menu-item-container">
+  <div class="menu-item-left">
+    <img src="cileklimonata.png" alt="Çilekli Limonata" class="menu-item-image">
+    <span class="menu-item-text" data-tr="ÇİLEKLİ LİMONATA" data-en="STRAWBERRY LEMONADE">ÇİLEKLİ LİMONATA</span>
+  </div>
+  <div class="price-and-arrow">
+    <span class="menu-price">85₺</span>
+    <span class="menu-arrow">→</span>
+  </div>
+</a>
+
+<a href="seftalilimon.html" class="menu-item-container">
+  <div class="menu-item-left">
+    <img src="seftalilimonata.png" alt="Şeftalili Limonata" class="menu-item-image">
+    <span class="menu-item-text" data-tr="ŞEFTALİLİ LİMONATA" data-en="PEACH LEMONADE">ŞEFTALİLİ LİMONATA</span>
+  </div>
+  <div class="price-and-arrow">
+    <span class="menu-price">85₺</span>
+    <span class="menu-arrow">→</span>
+  </div>
+</a>
+
+<a href="bogurtlenlimon.html" class="menu-item-container">
+  <div class="menu-item-left">
+    <img src="bogurtlenlilimonata.png" alt="Böğürtlenli Limonata" class="menu-item-image">
+    <span class="menu-item-text" data-tr="BÖĞÜRTLENLİ LİMONATA" data-en="BLACKBERRY LEMONADE">BÖĞÜRTLENLİ LİMONATA</span>
+  </div>
+  <div class="price-and-arrow">
+    <span class="menu-price">85₺</span>
+    <span class="menu-arrow">→</span>
+  </div>
+</a>
+
+<a href="karpuzlimon.html" class="menu-item-container">
+  <div class="menu-item-left">
+    <img src="karpuzlimonata.png" alt="Karpuzlu Limonata" class="menu-item-image">
+    <span class="menu-item-text" data-tr="KARPUZLU LİMONATA" data-en="WATERMELON LEMONADE">KARPUZLU LİMONATA</span>
+  </div>
+  <div class="price-and-arrow">
+    <span class="menu-price">85₺</span>
+    <span class="menu-arrow">→</span>
+  </div>
+</a>
+
+<a href="elmalimon.html" class="menu-item-container">
+  <div class="menu-item-left">
+    <img src="elmaroma.png" alt="Yeşil Elmalı Limonata" class="menu-item-image">
+    <span class="menu-item-text" data-tr="YEŞİL ELMALI LİMONATA" data-en="GREEN APPLE LEMONADE">YEŞİL ELMALI LİMONATA</span>
+  </div>
+  <div class="price-and-arrow">
+    <span class="menu-price">85₺</span>
+    <span class="menu-arrow">→</span>
+  </div>
+</a>
+
+    <a href="cool.html" class="menu-item-container">
+      <div class="menu-item-left">
+        <img src="cool.png" alt="Cool Lime" class="menu-item-image">
+        <span class="menu-item-text" data-tr="COOL LIME" data-en="COOL LIME">COOL LIME</span>
+      </div>
+      <div class="price-and-arrow">
+        <span class="menu-price">90₺</span>
+        <span class="menu-arrow">→</span>
+      </div>
+    </a>
+    <a href="berry.html" class="menu-item-container">
+      <div class="menu-item-left">
+        <img src="berry.png" alt="Berry Hibiscus" class="menu-item-image">
+        <span class="menu-item-text" data-tr="BERRY HİBİSCUS" data-en="BERRY HIBISCUS">BERRY HİBİSCUS</span>
+      </div>
+      <div class="price-and-arrow">
+        <span class="menu-price">90₺</span>
+        <span class="menu-arrow">→</span>
+      </div>
+    </a>
+
+    <h3 class="menu-title" data-tr="SOĞUK KAHVELER" data-en="COLD COFFEES">SOĞUK KAHVELER</h3>
+    <a href="filtre.html" class="menu-item-container">
+      <div class="menu-item-left">
+        <img src="aromalilatte.png" alt="Ice Filter Coffee" class="menu-item-image">
+        <span class="menu-item-text" data-tr="ICE FILTER COFFEE" data-en="ICE FILTER COFFEE">ICE FILTER COFFEE</span>
+      </div>
+      <div class="price-and-arrow">
+        <span class="menu-price">90₺</span>
+        <span class="menu-arrow">→</span>
+      </div>
+    </a>
+    <a href="americano.html" class="menu-item-container">
+      <div class="menu-item-left">
+        <img src="americano.png" alt="Ice Americano" class="menu-item-image">
+        <span class="menu-item-text" data-tr="ICE AMERICANO" data-en="ICE AMERICANO">ICE AMERICANO</span>
+      </div>
+      <div class="price-and-arrow">
+        <span class="menu-price">90₺</span>
+        <span class="menu-arrow">→</span>
+      </div>
+    </a>
+    <a href="icelatte.html" class="menu-item-container">
+      <div class="menu-item-left">
+        <img src="icelatte.png" alt="Ice Latte" class="menu-item-image">
+        <span class="menu-item-text" data-tr="ICE LATTE" data-en="ICE LATTE">ICE LATTE</span>
+      </div>
+      <div class="price-and-arrow">
+        <span class="menu-price">90₺</span>
+        <span class="menu-arrow">→</span>
+      </div>
+    </a>
+    <a href="flatwhite.html" class="menu-item-container">
+      <div class="menu-item-left">
+        <img src="icelatte.png" alt="Ice Flat White" class="menu-item-image">
+        <span class="menu-item-text" data-tr="ICE FLAT WHITE" data-en="ICE FLAT WHITE">ICE FLAT WHITE</span>
+      </div>
+      <div class="price-and-arrow">
+        <span class="menu-price">100₺</span>
+        <span class="menu-arrow">→</span>
+      </div>
+    </a>
+    <a href="mocha.html" class="menu-item-container">
+      <div class="menu-item-left">
+        <img src="icelatte.png" alt="Ice Mocha" class="menu-item-image">
+        <span class="menu-item-text" data-tr="ICE MOCHA" data-en="ICE MOCHA">ICE MOCHA</span>
+      </div>
+      <div class="price-and-arrow">
+        <span class="menu-price">100₺</span>
+        <span class="menu-arrow">→</span>
+      </div>
+    </a>
+    <a href="whitemocha.html" class="menu-item-container">
+      <div class="menu-item-left">
+        <img src="aromalilatte.png" alt="Ice White Chocolate Mocha" class="menu-item-image">
+        <span class="menu-item-text" data-tr="ICE WHITE CHOCOLATE MOCHA" data-en="ICE WHITE CHOCOLATE MOCHA">ICE WHITE CHOCOLATE MOCHA</span>
+      </div>
+      <div class="price-and-arrow">
+        <span class="menu-price">100₺</span>
+        <span class="menu-arrow">→</span>
+      </div>
+    </a>
+    <a href="darkmocha.html" class="menu-item-container">
+      <div class="menu-item-left">
+        <img src="mochasıcak.png" alt="Ice Dark Mocha" class="menu-item-image">
+        <span class="menu-item-text" data-tr="ICE DARK MOCHA" data-en="ICE DARK MOCHA">ICE DARK MOCHA</span>
+      </div>
+      <div class="price-and-arrow">
+        <span class="menu-price">100₺</span>
+        <span class="menu-arrow">→</span>
+      </div>
+    </a>
+    <a href="caramellatta.html" class="menu-item-container">
+      <div class="menu-item-left">
+        <img src="aromalilatte.png" alt="Ice Caramel Latte" class="menu-item-image">
+        <span class="menu-item-text" data-tr="ICE CARAMEL LATTE" data-en="ICE CARAMEL LATTE">ICE CARAMEL LATTE</span>
+      </div>
+      <div class="price-and-arrow">
+        <span class="menu-price">100₺</span>
+        <span class="menu-arrow">→</span>
+      </div>
+    </a>
+    <a href="caramelmacchiato.html" class="menu-item-container">
+      <div class="menu-item-left">
+        <img src="aromalilatte.png" alt="Ice Caramel Macchiato" class="menu-item-image">
+        <span class="menu-item-text" data-tr="ICE CARAMEL MACCHIATO" data-en="ICE CARAMEL MACCHIATO">ICE CARAMEL MACCHIATO</span>
+      </div>
+      <div class="price-and-arrow">
+        <span class="menu-price">100₺</span>
+        <span class="menu-arrow">→</span>
+      </div>
+    </a>
+
+    <h3 class="menu-title" data-tr="ŞİŞEDE İÇECEKLER" data-en="BOTTLED DRINKS">ŞİŞEDE İÇECEKLER</h3>
+<a href="sise.html" class="menu-item-container">
+  <div class="menu-item-left">
+    <img src="su.png" alt="SU" class="menu-item-image">
+    <span class="menu-item-text" data-tr="SU" data-en="WATER">SU</span>
+  </div>
+  <div class="price-and-arrow">
+    <span class="menu-price">10₺</span>
+    <span class="menu-arrow">→</span>
+  </div>
+</a>
+<a href="sise.html" class="menu-item-container">
+  <div class="menu-item-left">
+    <img src="sade.png" alt="SADE SODA" class="menu-item-image">
+    <span class="menu-item-text" data-tr="SADE SODA" data-en="PLAIN SODA">SADE SODA</span>
+  </div>
+  <div class="price-and-arrow">
+    <span class="menu-price">30₺</span>
+    <span class="menu-arrow">→</span>
+  </div>
+</a>
+<a href="sise.html" class="menu-item-container">
+  <div class="menu-item-left">
+    <img src="limon.png" alt="LİMONLU SODA" class="menu-item-image">
+    <span class="menu-item-text" data-tr="LİMONLU SODA" data-en="LEMON SODA">LİMONLU SODA</span>
+  </div>
+  <div class="price-and-arrow">
+    <span class="menu-price">30₺</span>
+    <span class="menu-arrow">→</span>
+  </div>
+</a>
+<a href="sise.html" class="menu-item-container">
+  <div class="menu-item-left">
+    <img src="elma.png" alt="ELMALI SODA" class="menu-item-image">
+    <span class="menu-item-text" data-tr="ELMALI SODA" data-en="APPLE SODA">ELMALI SODA</span>
+  </div>
+  <div class="price-and-arrow">
+    <span class="menu-price">30₺</span>
+    <span class="menu-arrow">→</span>
+  </div>
+</a>
+<a href="sise.html" class="menu-item-container">
+  <div class="menu-item-left">
+    <img src="mandalina.png" alt="MANDALİNALI SODA" class="menu-item-image">
+    <span class="menu-item-text" data-tr="MANDALİNALI SODA" data-en="MANDARIN SODA">MANDALİNALI SODA</span>
+  </div>
+  <div class="price-and-arrow">
+    <span class="menu-price">30₺</span>
+    <span class="menu-arrow">→</span>
+  </div>
+</a>
+<a href="sise.html" class="menu-item-container">
+  <div class="menu-item-left">
+    <img src="frenk.png" alt="FRENK ÜZÜMÜ & KARADUTLU SODA" class="menu-item-image">
+    <span class="menu-item-text" data-tr="FRENK ÜZÜMÜ & KARADUTLU SODA" data-en="CURRANT & BLACKBERRY SODA">FRENK ÜZÜMÜ & KARADUTLU SODA</span>
+  </div>
+  <div class="price-and-arrow">
+    <span class="menu-price">30₺</span>
+    <span class="menu-arrow">→</span>
+  </div>
+</a>
+<a href="sise.html" class="menu-item-container">
+  <div class="menu-item-left">
+    <img src="karpuz.png" alt="KARPUZ & ÇİLEKLİ SODA" class="menu-item-image">
+    <span class="menu-item-text" data-tr="KARPUZ & ÇİLEKLİ SODA" data-en="WATERMELON & STRAWBERRY SODA">KARPUZ & ÇİLEKLİ SODA</span>
+  </div>
+  <div class="price-and-arrow">
+    <span class="menu-price">30₺</span>
+    <span class="menu-arrow">→</span>
+  </div>
+</a>
+<a href="sise.html" class="menu-item-container">
+  <div class="menu-item-left">
+    <img src="nar.png" alt="NARLI SODA" class="menu-item-image">
+    <span class="menu-item-text" data-tr="NARLI SODA" data-en="POMEGRANATE SODA">NARLI SODA</span>
+  </div>
+  <div class="price-and-arrow">
+    <span class="menu-price">30₺</span>
+    <span class="menu-arrow">→</span>
+  </div>
+</a>
+    <!-- TATLILAR -->
+<h3 class="menu-title" data-tr="TATLILAR" data-en="DESSERTS">TATLILAR</h3>
+
+<a href="cikmono.html" class="menu-item-container">
+  <div class="menu-item-left">
+    <img src="cikolata.png" alt="Çikolatalı Mono" class="menu-item-image">
+    <span class="menu-item-text" data-tr="ÇİKOLATALI MONO" data-en="CHOCOLATE MONO">ÇİKOLATALI MONO</span>
+  </div>
+  <div class="price-and-arrow">
+    <span class="menu-price">120₺</span>
+    <span class="menu-arrow">→</span>
+  </div>
+</a>
+
+<a href="chees.html" class="menu-item-container">
+  <div class="menu-item-left">
+    <img src="cheescake.png" alt="Frambuazlı Cheesecake" class="menu-item-image">
+    <span class="menu-item-text" data-tr="FRAMBUAZLI CHEESECAKE" data-en="RASPBERRY CHEESECAKE">FRAMBUAZLI CHEESECAKE</span>
+  </div>
+  <div class="price-and-arrow">
+    <span class="menu-price">120₺</span>
+    <span class="menu-arrow">→</span>
+  </div>
+</a>
+
+<a href="red.html" class="menu-item-container">
+  <div class="menu-item-left">
+    <img src="redvelvet.png" alt="Red Velvet" class="menu-item-image">
+    <span class="menu-item-text" data-tr="RED VELVET" data-en="RED VELVET">RED VELVET</span>
+  </div>
+  <div class="price-and-arrow">
+    <span class="menu-price">120₺</span>
+    <span class="menu-arrow">→</span>
+  </div>
+</a>
+
+<a href="orman.html" class="menu-item-container">
+  <div class="menu-item-left">
+    <img src="ibiza.png" alt="Orman Meyveli Rulo" class="menu-item-image">
+    <span class="menu-item-text" data-tr="ORMAN MEYVELİ RULO" data-en="FOREST FRUITS ROLL">ORMAN MEYVELİ RULO</span>
+  </div>
+  <div class="price-and-arrow">
+    <span class="menu-price">120₺</span>
+    <span class="menu-arrow">→</span>
+  </div>
+</a>
+
+<a href="bella.html" class="menu-item-container">
+  <div class="menu-item-left">
+    <img src="frambuaz.png" alt="Çikolatalı Frambuazlı Mono" class="menu-item-image">
+    <span class="menu-item-text" data-tr="ÇİKOLATALI FRAMBUAZLI MONO" data-en="CHOCOLATE RASPBERRY MONO">ÇİKOLATALI FRAMBUAZLI MONO</span>
+  </div>
+  <div class="price-and-arrow">
+    <span class="menu-price">120₺</span>
+    <span class="menu-arrow">→</span>
+  </div>
+</a>
+
+<a href="framono.html" class="menu-item-container">
+  <div class="menu-item-left">
+    <img src="mouse.png" alt="Frambuazlı Mono" class="menu-item-image">
+    <span class="menu-item-text" data-tr="FRAMBUAZLI MONO" data-en="RASPBERRY MONO">FRAMBUAZLI MONO</span>
+  </div>
+  <div class="price-and-arrow">
+    <span class="menu-price">120₺</span>
+    <span class="menu-arrow">→</span>
+  </div>
+</a>
+
+<a href="sufle.html" class="menu-item-container">
+  <div class="menu-item-left">
+    <img src="sufle.png" alt="Sufle" class="menu-item-image">
+    <span class="menu-item-text" data-tr="SUFLE" data-en="SOUFFLÉ">SUFLE</span>
+  </div>
+  <div class="price-and-arrow">
+    <span class="menu-price">110₺</span>
+    <span class="menu-arrow">→</span>
+  </div>
+</a>
+
+    
+  </div>
+</div>
+
+<div id="navbar-placeholder"></div>
+<div id="footer-placeholder"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // Navbar'ı yükle
+        fetch('navbar.html')
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+                // Navbar yüklendikten sonra dil butonunu çalıştır
+                const initialLang = localStorage.getItem("selectedLang") || document.documentElement.lang || 'tr';
+                document.documentElement.lang = initialLang;
+                updateLanguageTexts(initialLang);
+                
+                const langSwitch = document.getElementById('langSwitch');
+                if (langSwitch) {
+                    langSwitch.textContent = initialLang.toUpperCase();
+                    langSwitch.addEventListener('click', toggleLanguage);
+                }
+            })
+            .catch(error => console.error("Navbar yüklenemedi:", error));
+
+        // Footer'ı yükle
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer-placeholder").innerHTML = data;
+            })
+            .catch(error => console.error("Footer yüklenemedi:", error));
+    });
+
+    // Dil değiştirme fonksiyonu
+    function toggleLanguage() {
+        const currentLang = document.documentElement.lang;
+        const newLang = currentLang === "tr" ? "en" : "tr";
+        
+        document.documentElement.lang = newLang;
+        localStorage.setItem("selectedLang", newLang);
+        
+        const langSwitch = document.getElementById("langSwitch");
+        if (langSwitch) {
+            langSwitch.textContent = newLang.toUpperCase();
+        }
+        
+        updateLanguageTexts(newLang);
+    }
+
+    // Tüm dil verilerini güncelleyen fonksiyon
+    function updateLanguageTexts(lang) {
+        document.querySelectorAll('[data-tr], [data-en]').forEach(el => {
+            const text = el.getAttribute(`data-${lang}`);
+            if (text) {
+                el.textContent = text;
+            }
+        });
+    }
+</script>
+</body>
+</html>
