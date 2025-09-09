@@ -23,6 +23,24 @@
     .navbar-custom .btn {
       color: #fff !important;
     }
+    .section-heading {
+  color: #b69258;
+  font-weight: 700;
+  font-size: 2rem; /* daha büyük */
+  margin-bottom: 1rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.section-heading::after {
+  content: "";
+  display: block;
+  width: 100%;  /* tüm satır genişliği */
+  height: 3px;
+  background-color: gray;
+  margin-top: 6px;
+  border-radius: 2px;
+}
 
     /* FOOTER */
     footer {
@@ -112,7 +130,7 @@
 
     <!-- ✅ İÇERİK -->
     <main class="col-md-9 col-lg-10 p-4">
-      <h3 class="mb-4" data-tr="FROZEN" data-en="FROZEN">FROZEN</h3>
+      <h3 class="section-heading mb-4" data-tr="FROZEN" data-en="FROZEN">FROZEN</h3>
       <div class="row g-4">
         <div class="col-6 col-md-3 text-center">
                         <a href="cilekfrozen.html" style="text-decoration: none; color: inherit;">

@@ -40,6 +40,24 @@
       color: #00381f;
       transform: translateX(3px);
     }
+    .section-heading {
+  color: #b69258;
+  font-weight: 700;
+  font-size: 2rem; /* daha büyük */
+  margin-bottom: 1rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.section-heading::after {
+  content: "";
+  display: block;
+  width: 100%;  /* tüm satır genişliği */
+  height: 3px;
+  background-color: gray;
+  margin-top: 6px;
+  border-radius: 2px;
+}
 
     footer {
       background-color: #00381f !important;
@@ -110,7 +128,7 @@
 
       <!-- ✅ İçerik -->
       <main class="col-md-9 col-lg-10 p-4">
-        <h3 class="mb-4" data-tr="SICAK İÇECEKLER" data-en="HOT DRINKS">SICAK İÇECEKLER</h3>
+        <h3 class="section-heading mb-4" data-tr="SICAK İÇECEKLER" data-en="HOT DRINKS">SICAK İÇECEKLER</h3>
         <div class="row g-4">
           <!-- Kartlar -->
           <div class="col-6 col-md-3 text-center">
